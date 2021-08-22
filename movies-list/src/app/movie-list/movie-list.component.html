@@ -1,0 +1,3 @@
+<div *ngFor="let movie of movies; let i=index">
+  <app-movie-item [movie]="movie" (movieSelected)="onSelect($event)"></app-movie-item>
+</div>
