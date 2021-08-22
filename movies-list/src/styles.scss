@@ -2,6 +2,7 @@
 @import '~@angular/material/theming';
 @import 'colors';
 
+
 @include mat-core();
 
 $movies-list-primary: mat-palette($mat-cyan, 700);

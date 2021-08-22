@@ -9,4 +9,9 @@ export class HeaderComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+
+  doNothing()
+  {
+    console.log("this is hit");
+  }
 }

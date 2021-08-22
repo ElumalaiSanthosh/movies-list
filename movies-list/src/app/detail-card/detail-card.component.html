@@ -1,0 +1,27 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      <h2>{{movie.Title}}</h2>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="wrapper">
+      <div class="description">
+        <p>{{movie.Plot}}</p>
+        <p><span>Rate: </span> {{ movie.imdbRating }}</p>
+        <p><span>Language: </span>{{movie.Language | titlecase}}</p>
+        <p><span>Location: </span>{{movie.Location | titlecase}}</p>
+      </div>
+      <div class="poster">
+        <img src="{{movie.Poster}}" alt="{{movie.Title}} movie poster" />
+      </div>
+    </div>
+    <ng-container *ngIf="slides!=null || slides.length>0">
+      <h2>Movie stills</h2>
+      <mat-carousel timings="200ms ease-in" [autoplay]="true" interval="6000">
+        <mat-carousel-slide *ngFor="let slide of slides; let i = index" [image]="slide" [hideOverlay]="false">
+        </mat-carousel-slide>
+      </mat-carousel>
+    </ng-container>
+  </mat-card-content>
+</mat-card>

@@ -8,6 +8,7 @@ import { environment } from 'src/environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderModule } from './header/header.module';
+import { MovieDetailModule } from './movie-detail/movie-detail.module';
 import { MoviePageModule } from './movie-page/movie-page.module';
 import { effects } from './state/effects';
 import { reducers } from './state/reducers';
@@ -20,7 +21,7 @@ const NGRX_MODULES = [
   !environment.production ? StoreDevtoolsModule.instrument() : [],
 ];
 
-const FEATURE_MODULES = [HeaderModule,MoviePageModule];
+const FEATURE_MODULES = [HeaderModule, MoviePageModule, MovieDetailModule];
 
 @NgModule({
   declarations: [AppComponent],
