@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700,900&display=swap');
+@import '~@angular/material/theming';
+@import 'colors';
+
+@include mat-core();
+
+$movies-list-primary: mat-palette($mat-cyan, 700);
+$movies-list-accent: mat-palette($mat-amber, 800);
+$movies-list-warn: mat-palette($mat-red);
+$movies-list-theme: mat-light-theme($movies-list-primary, $movies-list-accent, $movies-list-warn);
+
+@include angular-material-theme($movies-list-theme);
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: white;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  background-image: url(https://www.netpremacy.com/wp-content/uploads/2018/09/Background-website-01.jpg);
+}
