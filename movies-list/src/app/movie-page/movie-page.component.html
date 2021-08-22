@@ -1,0 +1,25 @@
+<section class="px-lg">
+  <div class="container-fluid">
+    <mat-grid-list cols="2" gutterSize="5px" rowHeight="100px">
+      <mat-grid-tile>
+        <h4>Search By Movie Name:   </h4>
+        <mat-form-field color="primary" appearance="outline">
+          <mat-label>Search your movie</mat-label>
+          <input matInput placeholder="Search..." (keyup)="searchMovies($event)">
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <h4>Sort By:   </h4>
+        <mat-form-field appearance="outline">
+          <mat-label>Sort By</mat-label>
+          <mat-select (selectionChange)="sortMovies($event)">
+            <mat-option *ngFor="let sort of fields" [value]="sort.value">
+              {{sort.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </mat-grid-tile>
+    </mat-grid-list>
+    <app-movie-list [movies]="movies$ | async" (selectedMovieFromList)="movieDetail($event)"></app-movie-list>
+  </div>
+</section>

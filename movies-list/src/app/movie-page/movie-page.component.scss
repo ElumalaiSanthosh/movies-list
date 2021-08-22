@@ -1,0 +1,15 @@
+:host {
+  display: flex;
+  align-items: center;
+  margin: 2%;
+}
+
+:host ::ng-deep {
+  .mat-form-field {
+    width: 50%;
+  }
+  .mat-form-field-outline {
+    background-color: #fff;
+  }
+}
+
