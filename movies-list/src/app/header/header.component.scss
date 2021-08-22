@@ -1,0 +1,18 @@
+.mat-toolbar {
+  background: white;
+}
+
+.mat-toolbar-row,
+.mat-toolbar-single-row {
+  height: 80px;
+
+}
+
+.mat-toolbar>img:nth-child(1) {
+  height: 60px;
+  width: 300px;
+}
+
+.mat-toolbar>span:nth-child(2) {
+  font-size: larger;
+}
